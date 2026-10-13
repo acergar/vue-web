@@ -4,6 +4,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+@font-face {
+  font-family: Batman;
+  src: url(../fonts/batmfo__.ttf);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
