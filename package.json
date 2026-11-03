@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lucide/vue": "^1.56.0",
+    "@lucide/vue": "^1.67.0",
     "@tailwindcss/vite": "^4.3.3",
     "@vueuse/core": "^15.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cn": "^0.5.2",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-vue": "^8.6.0",
     "reka-ui": "^2.11.0",

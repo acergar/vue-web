@@ -5,7 +5,15 @@ import Carrusimaginum from '@/components/Carrusimaginum.vue';
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
 import { useMouseMotio } from '@/composables/useMouseMotio';
 import { scrollToSection } from '@/utils/scrollToSection';
-
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 const photos = ["justice", "arkham", "superman", "varios", "villana", "villano", "grupo", "robin", "anne", "joker", "resplandor", "cat", "gafas", "league", "fondoVerde"];
 
@@ -63,54 +71,174 @@ const menuItems = [
     </header>
 
 
-        <section id="vehiculis">
-        <div class="vehiculis-arca">
+      <section id="vehiculis">
+      <div class="vehiculis-arca">
 
-            <div class="item unus">
-                <div class="notitia">
-                <h2>Avión</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vulputate elit eget fermentum. Ut laoreet ante lacus. Quisque ut tincidunt metus. Curabitur congue, arcu nec tempus sodales, neque sem ultrices mauris, eu tincidunt nibh nibh eu massa. Aenean rhoncus quis nibh ac facilisis.</p>
-                <small>Fabricado en 2005</small>
+          <div class="item unus">
+              <div class="notitia">
+              <h2>Avión</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vulputate elit eget fermentum. Ut laoreet ante lacus. Quisque ut tincidunt metus. Curabitur congue, arcu nec tempus sodales, neque sem ultrices mauris, eu tincidunt nibh nibh eu massa. Aenean rhoncus quis nibh ac facilisis.</p>
+              <small>Fabricado en 2005</small>
+              </div>
+              <img src="/imagines/batman/avion.jpg"/>
+          </div>
+
+          <div class="item duo">
+              <div class="notitia">
+              <h2>Moto</h2>
+              <p>Nulla aliquip cupidatat voluptate veniam nostrud aliquip sit enim officia. Sit eu pariatur officia qui dolor adipisicing cupidatat. Sit consectetur et eu ut esse laboris nulla.</p>
+              <small>Fabricado en 2006</small>
+              </div>
+              <img src="/imagines/batman/moto.jpg"/>
+          </div>
+          
+          <div class="item tribus">
+              <div class="notitia">
+              <h2>Coche</h2>
+              <p>Irure adipisicing est minim eu ad dolor. Eu ea commodo pariatur ut occaecat in cupidatat reprehenderit ut laborum duis. Sunt minim ex fugiat reprehenderit. Lorem consectetur reprehenderit commodo non</p>
+              <small>Fabricado en 2007</small>
+              </div>
+              <img src="/imagines/batman/car.jpg"/>
+          </div>
+          </div>
+
+          <div class="vehiculis-titulus">
+          <h1>Vehículos de Batman</h1>
+
+          </div>
+      </section>
+
+
+      <section id="videre" class="flex w-full justify-center min-h-[60vh] lg:min-h-[95vh] items-center bg-gray-900">
+
+      <Carrusimaginum 
+        :photos="photos"
+        basePath="/imagines/batman"
+        :autoplayDelay="1500"
+      />
+      
+      </section>
+
+      <section id="contactus" class="w-full py-12 bg-gray-100">
+
+        <div class="container mx-auto max-w-5xl px-4">
+
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Contacta con Batman</h2>
+                
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+
+                  <!-- Mapa de Google Maps -->
+            <div class="hidden lg:block w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
+              <div class="aspect-square">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.487775824737!2d-0.3411403000000272!3d39.4808991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60487c5d604077%3A0x150fdf31fdc5a6f6!2sUniversidad%20Polit%C3%A9cnica%20de%20Valencia%20(UPV)!5e0!3m2!1ses!2ses!4v1793705830786!5m2!1ses!2ses"
+                  class="w-full h-full rounded-lg"
+                  :style="{ border: 0 }"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+                  <!-- Formulario -->
+            <div class="w-full max-w-md mx-auto lg:max-w-none lg:w-1/2 ">
+              <form  class="space-y-6 bg-white p-8 rounded-lg shadow-lg aspect-square">
+                <div class="space-y-2">
+
+                  <Label for="nomen">Nombre</Label>
+                  <Input id="nomen" required />
+
                 </div>
-                <img src="/imagines/batman/avion.jpg"/>
-            </div>
+                      
+                <div class="space-y-2">
+                    
+                  <Label for="cognomen">Apellidos</Label>
+                  <Input id="cognomen" required />
 
-            <div class="item duo">
-                <div class="notitia">
-                <h2>Moto</h2>
-                <p>Nulla aliquip cupidatat voluptate veniam nostrud aliquip sit enim officia. Sit eu pariatur officia qui dolor adipisicing cupidatat. Sit consectetur et eu ut esse laboris nulla.</p>
-                <small>Fabricado en 2006</small>
                 </div>
-                <img src="/imagines/batman/moto.jpg"/>
-            </div>
-            
-            <div class="item tribus">
-                <div class="notitia">
-                <h2>Coche</h2>
-                <p>Irure adipisicing est minim eu ad dolor. Eu ea commodo pariatur ut occaecat in cupidatat reprehenderit ut laborum duis. Sunt minim ex fugiat reprehenderit. Lorem consectetur reprehenderit commodo non</p>
-                <small>Fabricado en 2007</small>
+
+                <div class="space-y-2">
+
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a fruit" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="apple">
+                        Apple
+                      </SelectItem>
+                      <SelectItem value="banana">
+                        Banana
+                      </SelectItem>
+                      <SelectItem value="blueberry">
+                        Blueberry
+                      </SelectItem>
+                      <SelectItem value="grapes">
+                        Grapes
+                      </SelectItem>
+                      <SelectItem value="pineapple">
+                        Pineapple
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+
                 </div>
-                <img src="/imagines/batman/car.jpg"/>
+
+                <div class="space-y-2">
+
+                  Poner un calendario para la fecha de la misión
+
+                </div>
+
+                Poner un botón para enviar la solicitud
+                    
+              </form>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="w-full bg-gray-900 text-gray-300 py-12">
+        <div class="flex flex-col md:flex-row md:justify-around gap-8 max-w-3xl mx-auto">
+
+          <div class="space-y-4 text-center md:text-left">
+
+            <h3 class="text-xl font-bold text-white">Información de Contacto</h3>
+                  
+              <div class="space-y-2">
+                <p class="flex items-center gap-2 justify-center md:justify-start">
+
+                  +1 (555) 123-4567
+
+                </p>
+                <p class="flex items-center gap-2 justify-center md:justify-start">
+
+                  batman@wayneenterprises.com
+
+                </p>
+                <p class="flex items-center gap-2 justify-center md:justify-start">
+
+                  Wayne Manor, Gotham City
+
+                </p>
+              </div>
             </div>
 
-            <div class="vehiculis-titulus">
-            <h1>Vehículos de Batman</h1>
-
-            </div>
-        </section>
-
-
-        <section id="videre" class="flex w-full justify-center min-h-[60vh] lg:min-h-[95vh] items-center bg-gray-900">
-
-        <Carrusimaginum 
-          :photos="photos"
-          basePath="/imagines/batman"
-          :autoplayDelay="1500"
-        />
-        
-        </section>
-
+            <!-- Redes sociales -->
+            <div class="space-y-4 text-center md:text-left text-gray-400">
+              <h3 class="text-xl font-bold text-white">Síguenos</h3>
+              <div class="flex gap-8 justify-center">
+              
+                Icono de X -
+                Icono de Instagram -
+                Icono de Linkedin - 
+                Icono de MessageCircle
+                    
+              </div>
+          </div>
+        </div>
+      </footer>
 
     </div>
 
