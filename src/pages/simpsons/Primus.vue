@@ -1,6 +1,5 @@
 
-
-<script lang="ts" setup>
+<script setup lang="ts">
 import LogoSimpsons from '@/components/LogoSimpsons.vue';
 import Button from '@/components/ui/button/Button.vue';
 
