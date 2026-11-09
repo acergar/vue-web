@@ -3,6 +3,9 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { characters } from './data';
 import { computed, ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 
 const inPagina = 6
 
@@ -45,7 +48,10 @@ const paginaNumeri: number[] = [ ... Array(totalPaginae) ].map((_, i) => i + 1)
      v-for="character in listaSimpsons"
      key="character.id"
     >
-     <CardContent class="flex flex-col items-center gap-1 w-full px-0">
+     <CardContent
+        @click="router.push(`/simpsons/gallery/${character.id}`)"
+        class="flex flex-col items-center gap-1 w-full px-0"
+     >
         <img 
          :src="`/imagines/simpsons/${ character.imago }`" 
          class="w-48 h-42 object-cover object-top mt-2 bg-simpsons-yellow border border-black rounded-t-md"
