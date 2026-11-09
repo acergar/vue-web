@@ -19,11 +19,11 @@ import Button from '@/components/ui/button/Button.vue';
             <strong>This is an unofficial app (even though it looks so cool!)</strong>
         </div>
         <div className="mt-8 flex gap-5">
-            <Button variant="tertiarius" size="elogantis">
+            <Button variant="tertiarius" size="elongatis">
                 <RouterLink to="/">Exit</RouterLink>
             </Button>
-            <Button variant="tertiarius" size="elogantis">
-                <RouterLink to="">Enter</RouterLink>
+            <Button variant="tertiarius" size="elongatis">
+                <RouterLink to="/simpsons/about">Enter</RouterLink>
             </Button>
         </div>
         <div class="flex gap-12 ">

@@ -35,7 +35,7 @@ export const router = createRouter ({
               component: Layout,
               children:[
                 {
-                  path: '', // /simpsons/about
+                  path: '',
                   name: 'simpsons-about',
                   component: Circa
                 },
@@ -46,12 +46,12 @@ export const router = createRouter ({
               component: Layout,
               children:[
                 {
-                  path: '', // /simpsons/gallery
+                  path: '',
                   name: 'simpsons-characters',
                   component: Collectione
                 },
                 {
-                  path: ':id', // /simpsons/gallery/23
+                  path: ':id',
                   name: 'simpsons-character',
                   component: Character
                 },

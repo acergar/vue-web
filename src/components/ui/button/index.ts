@@ -31,7 +31,7 @@ export const buttonVariants = cva(
         "icon-xs": "size-6 rounded-md [&_svg:not([class*='size-'])]:size-3",
         "icon-sm": "size-8",
         "icon-lg": "size-10",
-        elogantis: "h-7.5 py-0.5 px-5",
+        elongatis: "h-7.5 py-0.5 px-5",
       },
     },
     defaultVariants: {
